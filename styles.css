@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body
+{
+	width: 100%;
+	min-height: 100vh;
+    background: #192849;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    overflow-x: hidden;
+}
+.maindiv
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    height: 100vh;
+}
+.scores
+{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    border: 4px solid #abaaaa;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.scorebox
+{
+    background: #F7F7F7;
+    padding: 0.7rem 3rem;
+    border-radius: 1rem;
+}
+.scorebox .title
+{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: blue;
+    letter-spacing: 1px;
+}
+.scorebox .score
+{
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: 700;
+    color: #545267;
+    cursor: pointer;
+}
+.gamebox
+{
+    margin: 7rem;
+    position: relative;
+}
+.buttonbox
+{
+    width: 100%;
+    text-align: end;
+}
+.buttonbox button
+{
+    background: transparent;
+    padding: 0.7rem 2rem;
+    border: 3px solid white;
+    border-radius: 0.4rem;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    outline: 0;
+}
+.gamebutton
+{
+    background: #E4E4E4;
+    padding: 2rem;
+    border-radius: 100%;
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.gamebutton img
+{
+    width: 5rem;
+}
+.paperbutton
+{
+    border: 1rem solid #516EF7;
+    transform: translate(-120%, -120%);
+}
+.scissorsbutton{
+    border: 1rem solid #ECA41C;
+    transform: translate(30%, -120%);
+}
+.rockbutton{
+    border: 1rem solid #DE3B57;
+    transform: translate(-50%, 20%);
+}
+.popupouterbox
+{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.rulesbox
+{
+    background: #FFFFFF;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 30px #0c0c0c8a;
+    display: none;
+}
+.rulesbox .topline
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+.rulesbox .topline p
+{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3B4061;
+}
+.rulesbox .topline img{
+    cursor: pointer;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+}
+.processingpart
+{
+    display: none;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+.processingpart div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 3rem;
+    transition: 0.5s;
+}
+.processingpart div p{
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 2rem;
+}
+.placeholder
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E4E4E4;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 100%;
+}
+.selected
+{
+    border: 1.5rem solid #3f3f3e;
+}
+.notselected
+{
+    background: #1d1d1d57;
+    border: 1.5rem solid #1a243a;
+}
+.selected img,.notselected img{
+    height: 8rem;
+    transition: 0.5s;
+}
+#result
+{
+    display: none;
+    justify-content: center;
+    margin: 2rem;
+}
+#result #resulttext
+{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+}
+#result button
+{
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.8rem 3rem;
+    background: #e6e6e6;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    outline: none;
+}
+.winner
+{
+    transform: scale(1.1);
+    box-shadow: 0 0 0px 30px #ffffff40, 0 0 0px 60px #ffffff40,0 0 0px 90px #ffffff40;
+}
+.winner img
+{
+    transform: rotate(60deg) scale(1.1);
+}
+.attribution
+{
+    text-align: right;
+    color: rgb(224, 224, 224);
+    padding: 2rem 1rem 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+.attribution a{
+    color: white;
+    text-decoration: none;
+}
+@media only screen and (max-width: 900px){
+    .scores
+    {
+        width: 90%;
+    }
+    .processingpart div
+    {
+        margin: 1rem;
+    }
+    .placeholder
+    {
+        height: 12rem;
+        width: 12rem;
+    }
+    .selected img, .notselected img
+    {
+        height: 5rem;
+    }
+}
+@media only screen and (max-width: 500px){
+    .maindiv
+    {
+        padding: 1rem;
+        height: auto;
+    }
+    .scores
+    {
+        padding: 1rem;
+        width: 100%;
+    }
+    .scores img {
+        height: 5rem;
+    }
+    .scorebox
+    {
+        padding: 0.5rem 2rem;
+    }
+    .scorebox .score
+    {
+        font-size: 2.5rem;
+    }
+    .gamebox
+    {
+        margin: 7rem 2rem;
+    }
+    .gamebox img
+    {
+        height: 10rem;
+    }
+    .gamebutton
+    {
+        height: 8rem;
+        width: 8rem;
+        padding: 1rem;
+    }
+    .gamebutton img{
+        height: 4rem;
+        width: auto;
+    }
+    .processingpart
+    {
+        flex-direction: column;
+    }
+    .placeholder {
+        height: 9rem;
+        width: 9rem;
+    }
+    .selected img, .notselected img {
+        height: 4rem;
+    }
+    #result
+    {
+        margin: 1rem;
+    }
+    .selected {
+        border: 1rem solid #3f3f3e;
+    }
+    .notselected
+    {
+    border: 1rem solid #1a243a;
+    }
+    .winner
+    {
+        box-shadow: 0 0 0px 20px #ffffff40, 0 0 0px 40px #ffffff40, 0 0 0px 60px #ffffff40;
+    }
+    .rulesbox {
+        padding: 1rem;
+    }
+}

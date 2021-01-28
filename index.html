@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#192849">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+<body>
+  <div class="maindiv">
+    <div class="scores">
+      <img src="images/logo.svg" alt="logo">
+      <div class="scorebox">
+        <p class="title">Score</p>
+        <p class="score" id="score">0</p>
+      </div>
+    </div>
+    <div class="gamebox">
+      <img src="images/bg-triangle.svg" alt="game-triangle">
+       <div class="gamebutton paperbutton" id="paper">
+        <img src="images/icon-paper.svg"  alt="paper">
+      </div>
+      <div class="gamebutton scissorsbutton"  id="scissors">
+        <img src="images/icon-scissors.svg" alt="scissors">
+      </div>
+      <div class="gamebutton rockbutton" id="rock">
+        <img src="images/icon-rock.svg" alt="rock">
+      </div>
+    </div>
+    <div class="processingpart">
+      <div class="user">
+        <p>YOU PICKED</p>
+        <div class="selected placeholder ">
+          <img src="">
+        </div>
+      </div>
+      <div id="result">
+        <p id="resulttext"></p>
+        <button id="playagain">PLAY AGAIN</button>
+      </div>
+      <div class="comp">
+        <p>THE HOUSE PICKED</p>
+        <div class="notselected placeholder">
+          <img src="" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="buttonbox">
+      <button id="rulesbutton">RULES</button>
+    </div>
+  </div>
+  <div class="popupouterbox">
+    <div class="rulesbox">
+      <div class="topline">
+        <p>RULES</p>
+        <img src="images/icon-close.svg" id="closerules" alt="close">
+      </div>
+      <img src="images/image-rules.svg" alt="">
+    </div>
+  </div>
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a><br>
+    Coded by <a target="_black" href="https://instagram.com/developer_Sah">Rahul Sah</a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
