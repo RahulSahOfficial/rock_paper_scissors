@@ -10,3 +10,8 @@
 <h4>Rules</h4>
 <img src="images/image-rules.svg" alt="rules">
 <hr>
+<h4>Options</h4>
+<img src="images/icon-rock.svg" alt="options">
+<img src="images/icon-paper.svg" alt="options">
+<img src="images/icon-scissors.svg" alt="options">
+<hr>
