@@ -46,7 +46,7 @@ function checkresult()
         $("#result button").css("color",bcolors[options.indexOf(comp)])
         $("#resulttext").text("YOU LOSE")
         $(".comp .placeholder").addClass("winner")
-        score=0;
+        score-=1;
     }
     else
     {
